@@ -13,6 +13,7 @@ import java.util.Map;
 @Component
 public interface BidInfoMapper {
 
+
     @Select(value="select a.bid_money bid_money,a.bid_time bid_time,b.product_name product_name from b_bid_info a inner join b_loan_info b " +
             "on a.loan_id=b.id where uid=#{uid} order by bid_time desc limit #{skipNum},#{getNum} ")
     List<Map> selectBidInfoByUserId(Map paramMap);

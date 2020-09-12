@@ -27,6 +27,7 @@ public class RechargeRecordSchedule {
     public void addRechargeRecord(){
 
 
+
     List<HashMap>  bidInfoList = bidInfoMapper.selectBidInfoNotInIncomeRecord();
 
     for(HashMap map:bidInfoList){
