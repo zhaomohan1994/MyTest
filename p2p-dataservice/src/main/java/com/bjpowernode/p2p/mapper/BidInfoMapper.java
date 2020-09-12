@@ -20,8 +20,6 @@ public interface BidInfoMapper {
 
 
 
-
-
     @Select(value="select bi.*,li.cycle,li.rate from b_bid_info bi left join b_income_record ir on bi.id=ir.bid_id inner join b_loan_info li on bi.loan_id=li.id where ir.id is null")
     List<HashMap> selectBidInfoNotInIncomeRecord();
 }
